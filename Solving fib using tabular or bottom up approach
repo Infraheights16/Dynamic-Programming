@@ -1,0 +1,29 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+//Bottom up approach OR tabulation method
+int bottomup(int n){
+    //Create dp array
+    vector<int> dp(n+1,-1);
+    //observe base case and fill initialized data
+    dp[0]=0;
+    dp[1]=1;
+    //iteration In for loop convert recursive calls to dp
+    for(int i=2;i<=n;i++){
+        dp[i]=dp[i-1]+dp[i-2];
+    }
+    return dp[n];
+}
+int main()
+{
+    cout<<"Enter n"<<endl;
+    int n; 
+    cin>>n;
+    cout<<bottomup(n);
+}
+
+
+//OUTPUT
+//Enter n
+//8
+//21
