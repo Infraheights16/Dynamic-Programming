@@ -1,7 +1,7 @@
 #include <iostream>
 #include<vector>
 using namespace std;
-//top dowm approach
+//top down approach
 int topdownsolve(int n,vector<int> &dp){
     //Base case
     if(n == 0 || n == 1){
